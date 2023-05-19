@@ -1,16 +1,16 @@
 {
   "name": "rtsp_demo",
   "version": "1.0.0",
-  "description": "",
+  "description": "rtsp electron demo",
   "main": "index.js",
   "scripts": {
-    "start": "electron .",
+    "start": "electron-forge start",
     "start2": "electron-forge start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "package": "electron-forge package",
     "make": "electron-forge make"
   },
-  "author": "",
+  "author": "sy",
   "license": "ISC",
   "devDependencies": {
     "@electron-forge/cli": "^6.1.1",
@@ -18,7 +18,7 @@
     "@electron-forge/maker-rpm": "^6.1.1",
     "@electron-forge/maker-squirrel": "^6.1.1",
     "@electron-forge/maker-zip": "^6.1.1",
-    "electron": "^24.3.0"
+    "electron": "^24.3.1"
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
