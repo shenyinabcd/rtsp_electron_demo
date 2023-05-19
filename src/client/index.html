@@ -1,0 +1,21 @@
+<script src="mpegts.js"></script>
+<video id="videoElement" autoplay controls></video>
+<script>
+    if (mpegts.getFeatureList().mseLivePlayback) {
+        var videoElement = document.getElementById('videoElement');
+        // var player = mpegts.createPlayer({
+        //     type: 'mse',  // could also be mpegts, m2ts, flv
+        //     isLive: true,
+        //     url: 'http://example.com/live/livestream.ts'
+        // });
+        var player = mpegts.createPlayer({
+            type: 'mse',  // could also be mpegts, m2ts, flv
+            isLive: true,
+            liveBufferLatencyChasing: true,
+            url: 'ws://localhost:8888/rtsp/?url=rtsp://zephyr.rtsp.stream/pattern%3FstreamKey=b152c64d3224c6f2a5cb9242c9c092ed'
+        });
+        player.attachMediaElement(videoElement);
+        player.load();
+        player.play();
+    }
+</script>
