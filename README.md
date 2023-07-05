@@ -19,3 +19,13 @@
 
 5. 打包  
    `npm run make`
+
+## 替换视频流链接
+
+在 src/client/index.html 文件中，找到 rtsp:// ，将 rtsp:// 到最后的这个链接，换成自己的链接。注意：？需要改成 %3F
+`url: 'ws://localhost:8888/rtsp/?url=rtsp://zephyr.rtsp.stream/pattern%3FstreamKey=4fa3e8b1de7f55ea04eb6946bed7ade8'`
+
+## 其他
+
+1. 命令行直接播放，不转码
+   `ffplay "rtsp://zephyr.rtsp.stream/pattern?streamKey=4fa3e8b1de7f55ea04eb6946bed7ade8"`
